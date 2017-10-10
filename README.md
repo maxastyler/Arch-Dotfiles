@@ -13,3 +13,6 @@ Once installed, and using the .vimrc install the plugins with ":PlugInstall"
 
 ## Xmonad
 Install xmonad and xmobar
+
+## tmuxp
+Install tmuxp to help with managing sessions in tmux
