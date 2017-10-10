@@ -3,7 +3,7 @@ Config { font = "-misc-tamzen-medium-r-normal--12-87-100-100-c-60-iso8859-1"
         , border = TopB
         , bgColor = "black"
         , fgColor = "grey"
-        , position = Static { xpos = 0, ypos = 0, width = 1286, height = 20 }
+        , position = Static { xpos = 0, ypos = 0, width = 1266, height = 20 }
         , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                         , Run Network "wlp3s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
