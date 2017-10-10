@@ -1,6 +1,6 @@
 # Arch-Dotfiles
 
-##Terminal
+## Terminal
 using urxvt as the terminal (install rxvt-unicode-patched from the aur)
 
 ## Setting up vim
@@ -11,5 +11,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 Once installed, and using the .vimrc install the plugins with ":PlugInstall"
 
-##Xmonad
+## Xmonad
 Install xmonad and xmobar
