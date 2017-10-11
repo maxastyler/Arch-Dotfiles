@@ -2,3 +2,6 @@ stalonetray &
 nm-applet &
 insync start &
 pasystray &
+compton &
+light-locker &
+~/.fehbg
