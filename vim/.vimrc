@@ -1,8 +1,13 @@
+set  rtp+=/lib/python3.6/site-packages/powerline/bindings/vim/
+set laststatus=2
+set t_Co=256
+
 call plug#begin()
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 Plug 'junegunn/fzf.vim'
 Plug 'benmills/vimux'
 Plug 'scrooloose/nerdtree'
+Plug '/lib/python3.6/site-packages/powerline/bindings/vim/plugin'
 call plug#end()
 
 "Map space to leader key, keeping \ as it as well
@@ -41,5 +46,8 @@ map <Leader>vz :VimuxZoomRunner<CR>
 map <F2> :NERDTreeToggle<CR>
 
 "Open FZF with <leader> ff
+"Open FZF at certain location with <leader> fi (find in)
 map <Leader>ff :Files<CR>
+map <Leader>fi :Files 
 map <Leader>bb :Buffers<CR>
+map <Leader>ll :Lines<CR>
