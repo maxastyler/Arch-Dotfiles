@@ -1,5 +1,6 @@
 set  rtp+=/lib/python3.6/site-packages/powerline/bindings/vim/
-set laststatus=2
+set laststatus=2 "Always display the status line
+set noshowmode "Hide the default mode text
 set t_Co=256
 
 call plug#begin()
@@ -8,6 +9,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'benmills/vimux'
 Plug 'scrooloose/nerdtree'
 Plug '/lib/python3.6/site-packages/powerline/bindings/vim/plugin'
+Plug 'valloric/youcompleteme'
+Plug 'majutsushi/tagbar'
+Plug 'tpope/vim-fugitive'
+Plug 'lervag/vimtex'
 call plug#end()
 
 "Map space to leader key, keeping \ as it as well
@@ -45,9 +50,19 @@ map <Leader>vz :VimuxZoomRunner<CR>
 "Open NERDTree with F2
 map <F2> :NERDTreeToggle<CR>
 
+"Toggle paste mode with <F11>
+set pastetoggle=<F11>
+
+"Open C-tags with <F8>
+map <F8> :TagbarToggle<CR>
+
 "Open FZF with <leader> ff
 "Open FZF at certain location with <leader> fi (find in)
 map <Leader>ff :Files<CR>
 map <Leader>fi :Files 
 map <Leader>bb :Buffers<CR>
 map <Leader>ll :Lines<CR>
+
+"Make completion in the menu be more sane
+set wildmode=longest,list,full
+set wildmenu
