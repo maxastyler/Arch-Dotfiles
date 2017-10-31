@@ -30,6 +30,12 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ```
 Once installed, and using the .vimrc install the plugins with ":PlugInstall"
 
+Need to compile youcompleteme
+Go into the folder plug downloaded it and run 
+```sh
+./install.py --clang-completer --system-libclang
+```
+
 ## Xmonad
 Install xmonad and xmobar
 
