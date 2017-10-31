@@ -83,6 +83,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+alias projectdiary="vim ~/git/Sodium-DFT-Project/project_diary"
+# add quantum espresso to the path file
+export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
+# add quantum espress pseudo potential folder to an environment variable
+export ESP_PSP_PATH="/home/max/quantum_espresso/qe-6.1/pseudo"
+export ESPRESSO_PSEUDO="/home/max/quantum_espresso/qe-6.1/pseudo"
 export EDITOR="vim"
 export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'
 stty -ixon
