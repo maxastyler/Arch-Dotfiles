@@ -128,7 +128,7 @@ newKeys XConfig {XMonad.modMask = modMask} =
   , ((modMask .|. shiftMask, xK_p), promote) -- move focused window to master
   , ((modMask, xK_a), sendMessage MirrorExpand)
   , ((modMask, xK_z), sendMessage MirrorShrink)
-  , ((modMask, xK_d), spawn "dmenu_run")
+  , ((modMask, xK_d), spawn "rofi -show run")
   , ((modMask, xK_q), kill)
   , ((modMask .|. shiftMask, xK_q), recompile True >> restart "xmonad" True)
   , ((0, xF86XK_AudioRaiseVolume), spawn "pactl set-sink-volume 0 +5%")
@@ -136,9 +136,11 @@ newKeys XConfig {XMonad.modMask = modMask} =
   , ((0, xF86XK_AudioMute), spawn "pactl set-sink-mute 0 toggle")
   , ((0, xF86XK_MonBrightnessUp), spawn "light -A 5")
   , ((0, xF86XK_MonBrightnessDown), spawn "light -U 5")
-  , ((0, xK_Print), spawn "scrot")
-  , ((0, xF86XK_Launch1), spawn "emacsclient -c")
-  , ((modMask, xK_End), spawn "slock") -- Lock the screen
+--  , ((0, xK_Print), spawn "scrot")
+  , ((0, xK_Print), spawn "scrot -e 'mv $f ~/pictures/screenshots/'")
+  , ((0, xF86XK_Launch1), spawn "urxvt -e tmuxp load ~/.tmuxp/vim-session.json -y")
+  , ((0, xF86XK_RotateWindows), spawn "thinkpad-rotate cw")
+  , ((modMask, xK_End), spawn "light-locker-command -l") -- Lock the screen
   , ((modMask .|. shiftMask, xK_Escape), confirmPrompt def "Exit to Login Screen" $ io (exitSuccess) ) -- Quit XMonad
   , ((modMask .|. shiftMask, xK_End), confirmPrompt def "Shutdown" $ spawn "shutdown now")
   , ((modMask .|. shiftMask, xK_Home), confirmPrompt def "Restart" $ spawn "reboot")
