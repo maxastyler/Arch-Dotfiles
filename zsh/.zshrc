@@ -85,6 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 alias projectdiary="vim ~/git/Sodium-DFT-Project/project_diary"
+
+#alias to log into uni computer
+alias sshcplab="ssh -X s1333534@ph-cplab.ph.ed.ac.uk"
+#address to connect to cplab
+export CPLAB = "s1333534@ph-cplab.ph.ed.ac.uk"
 # add quantum espresso to the path file
 export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
 # add quantum espress pseudo potential folder to an environment variable
