@@ -57,7 +57,7 @@ myScratchPads = [ NS "mixer" spawnMixer findMixer manageMixer -- Pavucontrol scr
         t = (1-h)/2
         l = (1-w)/2
 
-    spawnTerm = myTerminal ++ " -name TermScratchpad -e zsh -c \"tmux attach -t scratchpad-tmux || tmux new-session -s scratchpad-tmux\""
+    spawnTerm = myTerminal ++ " -name TermScratchpad -e zsh -c \"tmux new-session -A -s scratchpad-tmux\""
     findTerm = resource =? "TermScratchpad"
     manageTerm = customFloating $ W.RationalRect l t w h
       where
@@ -124,7 +124,7 @@ newKeys XConfig {XMonad.modMask = modMask} =
   , ((modMask, xK_F3), namedScratchpadAction myScratchPads "mixer")
   , ((modMask, xK_F1), namedScratchpadAction myScratchPads "gpmdp")
   , ((modMask, xK_Return), spawn "urxvt")
-  , ((modMask .|. shiftMask, xK_Return), spawn "urxvt -e zsh -c \"tmux attach -t xmonad-tmux || tmux new-session -s xmonad-tmux\"")
+  , ((modMask .|. shiftMask, xK_Return), spawn "urxvt -e zsh -c \"tmux new-session -A -s xmonad-tmux\"")
   , ((modMask .|. shiftMask, xK_p), promote) -- move focused window to master
   , ((modMask, xK_a), sendMessage MirrorExpand)
   , ((modMask, xK_z), sendMessage MirrorShrink)
