@@ -18,6 +18,7 @@ scrot
 -- For scrot, make sure the folder ~/pictures/screenshots exists
 compton
 light-locker
+fzf
 
 ## Terminal
 using urxvt as the terminal (install rxvt-unicode-patched from the aur)
