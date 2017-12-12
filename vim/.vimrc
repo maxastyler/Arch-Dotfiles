@@ -15,6 +15,9 @@ Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
 call plug#end()
 
+"Set the rust source path for YouCompleteMe
+let g:ycm_rust_src_path = '/home/max/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+
 "Map space to leader key, keeping \ as it as well
 map <SPACE> <leader>
 
