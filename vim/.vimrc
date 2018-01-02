@@ -66,6 +66,10 @@ map <Leader>fi :Files
 map <Leader>bb :Buffers<CR>
 map <Leader>ll :Lines<CR>
 
+"Use <leader> bp and <leader> bn
+map <Leader>bp :bp<CR>
+map <Leader>bn :bn<CR>
+
 "Make completion in the menu be more sane
 set wildmode=longest,list,full
 set wildmenu
