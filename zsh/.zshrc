@@ -33,6 +33,9 @@ bindkey -M vicmd "^V" edit-command-line
 # Make vi transitions faster
 export KEYTIMEOUT=1
 
+#Reverse tab completion
+bindkey '^[[Z' reverse-menu-complete
+
 source /usr/share/fzf/key-bindings.zsh
 # Use zsh interactive cd plugin
 # source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
