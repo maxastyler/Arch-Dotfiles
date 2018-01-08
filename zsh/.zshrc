@@ -20,6 +20,11 @@ bindkey -M vicmd "^V" edit-command-line
 export KEYTIMEOUT=1
 
 source /usr/share/fzf/key-bindings.zsh
+# Use zsh interactive cd plugin
+source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
+
+#Disable ctrl-d logout
+setopt IGNORE_EOF
 
 alias projectdiary="vim ~/git/Sodium-DFT-Project/project_diary"
 alias sshbm="ssh -X max@big-monkey -t \"tmux attach -t max-ssh || tmux new -s max-ssh\""
