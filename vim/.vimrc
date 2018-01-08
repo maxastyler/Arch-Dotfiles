@@ -46,10 +46,8 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
-""""""""""
-"Set relative line numbers, nice for jumping around
-""""""""""
-set relativenumber
+"Show line numbers
+set number
 
 "Give ability to write to a protected file with w!! if you haven't started in
 "sudo mode
