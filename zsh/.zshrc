@@ -12,6 +12,15 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+# Improving vi mode
+autoload -z edit-command-line
+zle -N edit-command-line
+bindkey -M vicmd "^V" edit-command-line
+# Make vi transitions faster
+export KEYTIMEOUT=1
+
+source /usr/share/fzf/key-bindings.zsh
+
 alias projectdiary="vim ~/git/Sodium-DFT-Project/project_diary"
 alias sshbm="ssh -X max@big-monkey -t \"tmux attach -t max-ssh || tmux new -s max-ssh\""
 
@@ -27,5 +36,6 @@ export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
 export ESP_PSP_PATH="/home/max/quantum_espresso/qe-6.1/pseudo"
 export ESPRESSO_PSEUDO="/home/max/quantum_espresso/qe-6.1/pseudo"
 export EDITOR="vim"
-export FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -f -g ""'
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 stty -ixon
