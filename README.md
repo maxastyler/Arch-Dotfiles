@@ -3,6 +3,8 @@
 tmux
 vim
 zsh
+the-silver-searcher
+ripgrep
 xmonad
 xmobar
 tmuxp
@@ -48,3 +50,6 @@ using oh my zsh, install from the git rather than aur
 ```sh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ```
+## Installing rust
+Run: $ curl https://sh.rustup.rs -sSf | sh
+
