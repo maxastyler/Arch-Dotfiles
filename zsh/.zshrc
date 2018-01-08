@@ -36,6 +36,9 @@ export KEYTIMEOUT=1
 #Reverse tab completion
 bindkey '^[[Z' reverse-menu-complete
 
+#Add completion highlighting
+zstyle ':completion:*' menu select
+
 source /usr/share/fzf/key-bindings.zsh
 # Use zsh interactive cd plugin
 # source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
