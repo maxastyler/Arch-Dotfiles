@@ -1,7 +1,5 @@
 from ranger.api.commands import Command
 
-fzf integration
-
 class fzf_select(Command):
     """
     :fzf_select
