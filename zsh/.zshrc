@@ -1,3 +1,17 @@
+#Prompt
+PS1=$'%F{def}%(?..%B%K{red}[%?]%K{def}%b )%(1j.%b%K{yel}%F{bla}%jJ%F{def}%K{def} .)%F{white}%B%*%b %F{m}%m:%F{white}%~ %(!.#.>) %F{def}'
+
+#address to connect to cplab
+export CPLAB="s1333534@ph-cplab.ph.ed.ac.uk"
+# add quantum espresso to the path file
+export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
+# add quantum espress pseudo potential folder to an environment variable
+export ESP_PSP_PATH="/home/max/quantum_espresso/qe-6.1/pseudo"
+export ESPRESSO_PSEUDO="/home/max/quantum_espresso/qe-6.1/pseudo"
+export EDITOR="vim"
+export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git}/*" 2> /dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
 HISTSIZE=1000
@@ -21,7 +35,7 @@ export KEYTIMEOUT=1
 
 source /usr/share/fzf/key-bindings.zsh
 # Use zsh interactive cd plugin
-source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
+# source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
 
 #Disable ctrl-d logout
 setopt IGNORE_EOF
@@ -33,14 +47,4 @@ alias sshbm="ssh -X max@big-monkey -t \"tmux attach -t max-ssh || tmux new -s ma
 alias sshcplabmain="ssh -X s1333534@ph-cplab.ph.ed.ac.uk -t \"export TERM=xterm && tmux new-session -A -s max-ssh\""
 sshcplab () {
 	ssh -X s1333534@ph-cplab.ph.ed.ac.uk -t "export TERM=xterm && ssh s1333534@cplab$1 -t \"export TERM=xterm && tmux new-session -A -s max-ssh\"";}
-#address to connect to cplab
-export CPLAB="s1333534@ph-cplab.ph.ed.ac.uk"
-# add quantum espresso to the path file
-export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
-# add quantum espress pseudo potential folder to an environment variable
-export ESP_PSP_PATH="/home/max/quantum_espresso/qe-6.1/pseudo"
-export ESPRESSO_PSEUDO="/home/max/quantum_espresso/qe-6.1/pseudo"
-export EDITOR="vim"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git}/*" 2> /dev/null'
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 stty -ixon
