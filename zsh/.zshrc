@@ -1,6 +1,9 @@
 #Prompt
 PS1=$'%F{def}%(?..%B%K{red}[%?]%K{def}%b )%(1j.%b%K{yel}%F{bla}%jJ%F{def}%K{def} .)%F{white}%B%*%b %F{m}%m:%F{white}%~ %(!.#.>) %F{def}'
 
+#Add custom completions
+fpath=(~/.config/zsh/completions $fpath)
+
 #address to connect to cplab
 export CPLAB="s1333534@ph-cplab.ph.ed.ac.uk"
 # add quantum espresso to the path file
@@ -9,8 +12,10 @@ export PATH="$PATH:/home/max/quantum_espresso/qe-6.1/bin"
 export ESP_PSP_PATH="/home/max/quantum_espresso/qe-6.1/pseudo"
 export ESPRESSO_PSEUDO="/home/max/quantum_espresso/qe-6.1/pseudo"
 export EDITOR="vim"
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore --hidden --follow -g "!{.git}/*" 2> /dev/null'
+export FZF_DEFAULT_COMMAND='rg --no-ignore --files --hidden --follow -g "!{.git}/*" 2> /dev/null'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_ALT_C_COMMAND="fd --no-ignore --hidden --follow --type d"
+export FZF_DEFAULT_OPTS="--preview='head -$LINES {}'"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
@@ -39,7 +44,8 @@ bindkey '^[[Z' reverse-menu-complete
 #Add completion highlighting
 zstyle ':completion:*' menu select
 
-source /usr/share/fzf/key-bindings.zsh
+# Source fzf keybindings
+source ~/.config/zsh/plugins/key-bindings.zsh
 # Use zsh interactive cd plugin
 # source ~/.config/zsh/plugins/zsh-interactive-cd.plugin.zsh
 
