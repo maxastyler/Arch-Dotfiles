@@ -5,6 +5,7 @@ vim
 zsh
 the-silver-searcher
 ripgrep
+fd-rs
 xmonad
 xmobar
 tmuxp
