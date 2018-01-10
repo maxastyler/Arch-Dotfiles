@@ -55,6 +55,22 @@
 *color7:                S_base2
 *color15:               S_base3
 
+!Rofi settings, solarized-light theme and that
+! Enable the extended coloring options
+rofi.color-enabled: true
+
+! Property Name     BG       Border   Separator
+rofi.color-window:  #eee8d5, #eee8d5, #fdf6e3
+
+! Property Name     BG       FG       BG-alt   Head-BG  Head-FG
+rofi.color-normal:  #eee8d5, #586e75, #eee8d5, #eee8d5, #002b36
+rofi.color-active:  #eee8d5, #268bd2, #eee8d5, #eee8d5, #268bd2
+rofi.color-urgent:  #eee8d5, #dc322f, #eee8d5, #eee8d5, #dc322f
+
+! Set the desired separator style
+rofi.separator-style: solid
+
+
 !URxvt*font: xft:Roboto:size=13, xft:PowerlineSymbols:size=13
 URxvt*font: xft:Iosevka Nerd Font:size=10
 !URxvt*font: xft:Source Code Pro for Powerline:size=10
