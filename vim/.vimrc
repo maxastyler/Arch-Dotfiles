@@ -1,4 +1,3 @@
-set  rtp+=/lib/python3.6/site-packages/powerline/bindings/vim/
 set laststatus=2 "Always display the status line
 set noshowmode "Hide the default mode text
 set t_Co=256
@@ -8,7 +7,6 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install -all' }
 Plug 'junegunn/fzf.vim'
 Plug 'benmills/vimux'
 Plug 'scrooloose/nerdtree'
-Plug '/lib/python3.6/site-packages/powerline/bindings/vim/plugin'
 Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
