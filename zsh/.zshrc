@@ -52,6 +52,8 @@ source ~/.config/zsh/plugins/key-bindings.zsh
 #Disable ctrl-d logout
 setopt IGNORE_EOF
 
+source ~/.config/zsh/plugins/fzf-mpd.zsh 
+
 alias projectdiary="vim ~/git/Sodium-DFT-Project/project_diary"
 alias sshbm="ssh -X max@big-monkey -t \"tmux attach -t max-ssh || tmux new -s max-ssh\""
 
