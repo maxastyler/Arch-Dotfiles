@@ -11,7 +11,26 @@ Plug 'valloric/youcompleteme'
 Plug 'majutsushi/tagbar'
 Plug 'tpope/vim-fugitive'
 Plug 'lervag/vimtex'
+Plug 'altercation/vim-colors-solarized'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+"Setting solarized theme
+set background=light
+colorscheme solarized
+
+"Setting for airline font
+let g:airline_powerline_fonts = 1
+
+"Use smarter tabline in airline
+let g:airline#extensions#tabline#enabled = 1
+
+"Change airline separators
+"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#right_alt_sep = '|'
+
+
 
 "Rust ctags settings
  let g:tagbar_type_rust = {
