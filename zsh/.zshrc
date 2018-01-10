@@ -1,5 +1,6 @@
 #Prompt
-PS1=$'%F{def}%(?..%B%K{red}[%?]%K{def}%b )%(1j.%b%K{yel}%F{bla}%jJ%F{def}%K{def} .)%F{white}%B%*%b %F{m}%m:%F{white}%~ %(!.#.>) %F{def}'
+PS1=$'%F{def}%(?..%B%K{yel}[%?]%K{def}%b )%(1j.%b%K{yel}%F{bla}%jJ%F{def}%K{def} .)%F{red}%B%*%b %F{m}%m:%F{red}%~ %(!.#.>) %F{def}'
+
 
 #Add custom completions
 fpath=(~/.config/zsh/completions $fpath)
@@ -62,3 +63,11 @@ alias sshcplabmain="ssh -X s1333534@ph-cplab.ph.ed.ac.uk -t \"export TERM=xterm 
 sshcplab () {
 	ssh -X s1333534@ph-cplab.ph.ed.ac.uk -t "export TERM=xterm && ssh s1333534@cplab$1 -t \"export TERM=xterm && tmux new-session -A -s max-ssh\"";}
 stty -ixon
+
+#Git aliases
+alias gia='git add'
+alias gis='git status'
+alias gic='git commit -m'
+alias gip='git push'
+alias gipu'=git pull'
+alias gid='git diff'
