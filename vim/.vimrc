@@ -93,8 +93,8 @@ map <F8> :TagbarToggle<CR>
 "Open FZF at certain location with <leader> fi (find in)
 map <Leader>ff :Files<CR>
 map <Leader>fi :Files 
-map <Leader>bb :Buffers<CR>
-map <Leader>ll :Lines<CR>
+map <Leader>fb :Buffers<CR>
+map <Leader>fl :Lines<CR>
 
 "Use <leader> bp and <leader> bn
 map <Leader>bp :bp<CR>
