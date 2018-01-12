@@ -21,6 +21,7 @@ import Graphics.X11.ExtraTypes.XF86
 import Data.Default
 import Data.Monoid
 import System.IO
+import Network.HostName
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
@@ -154,7 +155,10 @@ myKeys = customKeys delKeys newKeys
 
 main :: IO ()
 main = do
-  xmproc <- spawnPipe "/usr/bin/xmobar /home/max/.xmobarrc"
+  hostname <- getHostName
+  xmproc <- if hostname == "pokey-monkey"
+    then  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_pokey"
+    else  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_big"
   xmonad $ ewmh def
     { borderWidth = myBorderWidth
     , terminal = myTerminal
