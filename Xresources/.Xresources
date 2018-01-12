@@ -6,6 +6,13 @@
 #define S_base1         #93a1a1
 #define S_base2         #eee8d5
 #define S_base3         #fdf6e3
+#if defined(SRVR_pokey_monkey)
+	#define FIXED_FONT xft:Iosevka Nerd Font:size=10
+#elif defined(SRVR_big_monkey)
+	#define FIXED_FONT xft:Iosevka Nerd Font:size=12
+#else
+	#define FIXED_FONT xft:Iosevka Nerd Font:size=12
+#endif
 
 *background:            S_base3
 *foreground:            S_base00
@@ -72,7 +79,7 @@ rofi.separator-style: solid
 
 
 !URxvt*font: xft:Roboto:size=13, xft:PowerlineSymbols:size=13
-URxvt*font: xft:Iosevka Nerd Font:size=10
+URxvt*font: FIXED_FONT
 !URxvt*font: xft:Source Code Pro for Powerline:size=10
 
 ! Set depth to make transparency work.
