@@ -18,6 +18,7 @@ google chrome
 rofi
 rxvt-patched-unicode
 scrot
+haskell-hostname
 -- For scrot, make sure the folder ~/pictures/screenshots exists
 compton
 light-locker
