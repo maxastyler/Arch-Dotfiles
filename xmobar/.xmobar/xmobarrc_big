@@ -3,18 +3,16 @@ Config { font = "xft:Iosevka Nerd Font:size=10"
         , borderColor = "black"
         , bgColor = "#504e45"
         , fgColor = "grey"
-        , position = Static { xpos = 0, ypos = 0, width = 1266, height = 20 }
-        , commands = [ Run Network "eth0" ["-L","0","-H","32","--normal","green","--high","red"] 10
-                        , Run Network "wlp3s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
+        , position = Static { xpos = 0, ypos = 0, width = 1820, height = 20 }
+        , commands = [ Run Network "enp3s0" ["-L","0","-H","32","--normal","green","--high","red"] 10
                         , Run Cpu ["-L","3","-H","50","--normal","green","--high","red"] 10
                         , Run Memory ["-t","Mem: <usedratio>%"] 10
                         , Run Swap [] 10
                         , Run Com "uname" ["-s","-r"] "" 36000
                         , Run Date "%b %_d %H:%M:%S" "date" 10
                         , Run StdinReader
-			, Run Battery ["-t","bat: <left>"] 10
                         ]
         , sepChar = "%"
         , alignSep = "}{"
-        , template = "%StdinReader% }{ %cpu% | %memory% * %swap% | %eth0% - %wlp3s0% | <fc=#ee9a00>%date%</fc> | %battery% "
+        , template = "%StdinReader% }{ %cpu% | %memory% | %enp3s0% | <fc=#ee9a00>%date%</fc> "
         }
