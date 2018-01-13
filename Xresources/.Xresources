@@ -9,9 +9,9 @@
 #if defined(SRVR_pokey_monkey)
 	#define FIXED_FONT xft:Iosevka Nerd Font:size=10
 #elif defined(SRVR_big_monkey)
-	#define FIXED_FONT xft:Iosevka Nerd Font:size=12
+	#define FIXED_FONT xft:Iosevka Nerd Font:size=11
 #else
-	#define FIXED_FONT xft:Iosevka Nerd Font:size=12
+	#define FIXED_FONT xft:Iosevka Nerd Font:size=11
 #endif
 
 *background:            S_base3
