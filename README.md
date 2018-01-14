@@ -23,6 +23,7 @@ haskell-hostname
 compton
 light-locker
 fzf
+xinit-xsession -- To run the ~/.xinitrc file as a session (for xmonad)
 
 ## Terminal
 using urxvt as the terminal (install rxvt-unicode-patched from the aur)
@@ -43,6 +44,7 @@ Go into the folder plug downloaded it and run
 
 ## Xmonad
 Install xmonad and xmobar
+Use this guide: http://brianbuccola.com/how-to-install-xmonad-and-xmobar-via-stack/
 
 ## tmuxp
 Install tmuxp to help with managing sessions in tmux
