@@ -21,10 +21,25 @@ import Graphics.X11.ExtraTypes.XF86
 import Data.Default
 import Data.Monoid
 import System.IO
-import Network.HostName
+import Foreign.C.Error
+import Foreign.C.String
+import Foreign.C.Types
+import Foreign.Marshal.Array
+
+--import Network.HostName
 
 import qualified XMonad.StackSet as W
 import qualified Data.Map as M
+
+-- Hostname stuff
+foreign import ccall unsafe "gethostname" gethostname :: CString -> CSize -> IO CInt
+
+getHostName :: IO HostName
+getHostName = allocaArray0 size $ \cstr -> do
+        throwErrnoIfMinus1_ "getHostName" $ gethostname cstr (fromIntegral size)
+        peekCString cstr
+    where size = 256
+type HostName = String
 
 myTerminal :: [Char]
 myBorderWidth :: Dimension
@@ -159,6 +174,7 @@ main = do
   xmproc <- if hostname == "pokey-monkey"
     then  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_pokey"
     else  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_big"
+  xmproc <- spawnPipe "xmobar /home/max/.xmobar/xmobarrc_big"
   xmonad $ ewmh def
     { borderWidth = myBorderWidth
     , terminal = myTerminal
