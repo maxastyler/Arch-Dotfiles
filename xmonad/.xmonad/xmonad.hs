@@ -172,9 +172,8 @@ main :: IO ()
 main = do
   hostname <- getHostName
   xmproc <- if hostname == "pokey-monkey"
-    then  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_pokey"
-    else  spawnPipe "/usr/bin/xmobar /home/max/.xmobar/xmobarrc_big"
-  xmproc <- spawnPipe "xmobar /home/max/.xmobar/xmobarrc_big"
+    then  spawnPipe "xmobar /home/max/.xmobar/xmobarrc_pokey"
+    else  spawnPipe "xmobar /home/max/.xmobar/xmobarrc_big"
   xmonad $ ewmh def
     { borderWidth = myBorderWidth
     , terminal = myTerminal
