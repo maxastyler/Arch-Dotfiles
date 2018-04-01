@@ -30,7 +30,7 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 "let g:airline#extensions#tabline#right_alt_sep = '|'
 
-
+let g:vimtex_view_general_viewer = 'zathura'
 
 "Rust ctags settings
  let g:tagbar_type_rust = {
@@ -49,6 +49,10 @@ let g:airline#extensions#tabline#enabled = 1
 
 "Set the rust source path for YouCompleteMe
 let g:ycm_rust_src_path = '/home/max/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
+if !exists('g:ycm_semantic_triggers')
+	let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers.tex = g:vimtex#re#youcompleteme
 
 "Map space to leader key, keeping \ as it as well
 map <SPACE> <leader>
