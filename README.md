@@ -46,6 +46,18 @@ Go into the folder plug downloaded it and run
 Install xmonad and xmobar
 Use this guide: http://brianbuccola.com/how-to-install-xmonad-and-xmobar-via-stack/
 
+and add this into /usr/share/xsessions/xmonad.desktop:
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Xmonad
+Comment=Lightweight X11 tiled window manager written in Haskell
+Exec=xmonad
+Icon=xmonad
+Terminal=false
+StartupNotify=false
+Categories=Application
+
 ## tmuxp
 Install tmuxp to help with managing sessions in tmux
 
