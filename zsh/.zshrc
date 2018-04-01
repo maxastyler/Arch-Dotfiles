@@ -17,6 +17,7 @@ export FZF_DEFAULT_COMMAND='rg --no-ignore --files --hidden --follow -g "!{.git}
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --no-ignore --hidden --follow --type d"
 export FZF_DEFAULT_OPTS="--preview='head -$LINES {}'"
+export NWCHEM_TOP="/home/max/nwchem/nwchem-6.8"
 
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.zsh_history
