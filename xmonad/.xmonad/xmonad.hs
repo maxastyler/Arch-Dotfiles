@@ -162,7 +162,7 @@ newKeys XConfig {XMonad.modMask = modMask} =
   , ((modMask .|. shiftMask, xK_Home), confirmPrompt def "Restart" $ spawn "reboot")
 
   -- Keyboard shortcuts to programs
-  , ((modMask, xK_F2), spawn "google-chrome-desktop")
+  , ((modMask, xK_F2), spawn "google-chrome-stable")
   , ((modMask, xK_F4), spawn "pcmanfm")
   ]
 
