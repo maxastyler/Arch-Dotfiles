@@ -1,2 +1,2 @@
 #!/bin/sh
-'feh' '--bg-fill' '/home/max/wallpapers/solarized-mountains-light.png' 
+feh --bg-fill '/home/max/wallpapers/solarized-mountains-light.png' 
