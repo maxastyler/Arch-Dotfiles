@@ -72,3 +72,6 @@ alias gic='git commit -m'
 alias gip='git push'
 alias gipu='git pull'
 alias gid='git diff'
+
+#Emacs aliases
+alias ect='emacsclient -t' #open emacs in the terminal
