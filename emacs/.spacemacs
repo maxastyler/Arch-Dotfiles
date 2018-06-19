@@ -463,7 +463,33 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
+  (setq dotspacemacs-use-spacelpa t)
+  (setq org-directory "~/mtyler88@gmail.com/org/")
+  (setq org-agenda-files '("~/mtyler88@gmail.com/org/"))
+  (setq org-capture-templates
+    '(
+      ("a" "Appointment" entry (file+headline
+                                "~/mtyler88@gmail.com/org/taskdiary.org" "Calendar")
+        "* APPT %^{Description} %^g
+        %?
+        Added: %U")
+      ("j" "Journal" entry (file+olp+datetree "~/mtyler88@gmail.com/org/journal.org")
+        "** %^{Heading}")
+      ("l" "Log Time" entry (file+olp+datetree
+                             "~/mtyler88@gmail.com/org/timelog.org" )
+        "** %U - %^{Activity}  :TIME:")
+      ("n" "Notes" entry (file+olp+datetree
+                           "~/mtyler88@gmail.com/org/taskdiary.org")
+        "* %^{Description} %^g %?
+        Added: %U")
+      ("t" "Task Diary" entry (file+olp+datetree
+                                "~/mtyler88@gmail.com/org/taskdiary.org")
+        "* TODO %^{Description}  %^g
+        %?
+        Added: %U"))
+    )
   )
+
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
